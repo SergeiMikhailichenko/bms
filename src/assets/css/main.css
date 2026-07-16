@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+body {
+    background-color: #0C0D0F;
+    display: block;
+    justify-items: center;
+}
+#app {
+    max-width: 1280px;
+    width: 100%;
+}
+@theme {
+    --color-dark: #131931;
+    --color-accent: #F7C948;
+    
+    
+    
+    --color-card: #191B1D;
+    --color-gray: #9B9FA5;
+    --color-orange: #EBA941;
+    --color-secondary: #F0F2F5;
+    --color-background: #0C0D0F;
+}
