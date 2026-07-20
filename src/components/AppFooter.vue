@@ -1,5 +1,6 @@
 <template>
-    <footer class="">
+    <footer class="relative w-full max-w-[1280px]">
+        
 
     </footer>
 </template>

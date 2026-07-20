@@ -38,7 +38,7 @@
                 <!-- <div class="absolute left-0 mx-[16px] md:mx-[32px] bottom-0 flex justify-center items-center w-[144px] h-[44px] rounded-[12px] bg-orange/10 bg-background border border-accent z-40 text-secondary">Подробнее</div> -->
             </div>
             <!-- Блок картинки -->
-            <div class="relative md:flex-2/3 w-full h-full">
+            <div class="relative md:flex-2/3 w-full mx-[16px] md:mx-0 h-[220px] md:h-full">
                 <img :src="imageLink" alt="" class="block w-full h-full object-cover object-center">
                 <!-- Затемнение снизу -->
                 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background"></div>
