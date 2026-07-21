@@ -21,7 +21,7 @@
                 «Инженерная мысль -
             </h1>
 
-            <p class="mt-[4px] md:mt-[13px] text-[16px] md:text-[20px] text-secondary">
+            <p class="mt-0 md:mt-[13px] text-[24px] md:text-[20px] font-bold text-secondary">
                 как отдельный вид искусства»
             </p>
         </div>
