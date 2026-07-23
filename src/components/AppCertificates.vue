@@ -1,22 +1,22 @@
 
 <template>
-    <div class="border-gray/10 border-t bg-gray/2 py-[32px]">
+    <div class="border-gray/10 border-t py-[32px]">
         <div class="flex justify-center">
             <div class="px-[16px] md:px-[32px] flex justify-start text-[32px] md:text-[48px] text-secondary font-bold w-full max-w-[1280px]">
-                Сертификаты ({{ certificates.length }})
+                Сертификаты
             </div>
         </div>
-        <div class="relative pt-[32px] md:pt-[64px] flex justify-center">
+        <div class="relative pt-[32px] md:pt-[64px] px-[16px] md:px-[32px] flex justify-center">
             <!-- Список сертификатов -->
-            <div class="flex max-w-[1280px] px-[16px] md:px-[32px] overflow-x-auto overflow-y-hidden gap-[12px]">
+            <div class="flex max-w-[1248px] md:max-w-[1216px] overflow-x-auto overflow-hidden gap-[12px] bg-linear-to-r from-background from-0% via-background via-85% to-transparent to-100%">
                 <div
                     v-for="value in certificates"
-                    :key="value.url"
+                    :key="value.url_min"
                     @click="openImage(value)"
                     class="h-[204px] w-[150px] shrink-0 rounded-[12px] overflow-hidden">
                     <img
                         class="w-full h-full object-cover transition duration-300 hover:scale-105" 
-                        :src="value.url" :alt="value.info">
+                        :src="value.url_min" :alt="value.info">
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
                 @click="closeImage"
             >
                 <img
-                :src="selectedImage.url"
+                :src="selectedImage.url_max"
                 :alt="selectedImage.info"
                 class="max-w-full max-h-full object-contain rounded-lg"
                 >
@@ -43,7 +43,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { certificates } from '@/assets/certificates'
+import { certificates } from '@/other/certificates'
 
 const selectedImage = ref(null)
 
