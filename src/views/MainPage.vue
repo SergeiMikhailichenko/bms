@@ -16,7 +16,6 @@ import AppPartners from '@/components/AppPartners.vue';
   <AppAbout />
   <AppCertificates />
   <AppPartners />
-  <div class="h-[100px]"></div>
   <AppFooter />
 
 </template>
