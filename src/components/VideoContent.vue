@@ -8,7 +8,7 @@
                 loop
                 playsinline
             >
-                <source src="@/assets/videos/v1.mp4" type="video/mp4" />
+                <source :src="video" type="video/mp4" />
             </video>
 
     <!-- Слева и справа -->
@@ -16,14 +16,11 @@
     <!-- Затемнение снизу -->
     <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background"></div>
 
-        <div class="absolute inset-0 flex flex-col items-center items-start justify-end px-[16px] md:px-[32px] mb-4 justify-center z-10">
-            <h1 class="text-[32px] md:text-[60px] font-bold text-secondary">
-                «Инженерная мысль -
+        <div class="absolute inset-0 flex flex-col items-center items-start justify-end px-[16px] md:px-[32px] pb-[40px] md:pb-[100px] justify-center z-10">
+            <h1 class="text-[20px] md:text-[40px] font-bold text-secondary whitespace-pre-line">
+                <!-- «Инженерная мысль -<br>как отдельный вид искусства» -->
+                {{ props.text }}
             </h1>
-
-            <p class="mt-0 md:mt-[13px] text-[24px] md:text-[20px] font-bold text-secondary">
-                как отдельный вид искусства»
-            </p>
         </div>
     </div>
 </div>
@@ -33,4 +30,9 @@
 
 
 <script setup>
+const props = defineProps({
+    text: String,
+    video: String,
+})
+
 </script>

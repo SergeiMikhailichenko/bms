@@ -12,7 +12,7 @@
               <div 
                 v-for="(value, index) in partners"
                 :key="index"
-                class="flex justify-center items-center w-full h-[70px] md:h-[80px] text-gray font-bold text-[14px] border border-secondary/10 rounded-[20px] bg-gradient-to-t from-background/30 to-gray/5"
+                class="flex justify-center items-center w-full h-[70px] md:h-[80px] text-gray font-bold text-[14px] border border-secondary/10 rounded-[20px] bg-gradient-to-t from-background/30 to-gray/5 hover:text-orange/90"
               >
                 {{ value }}
               </div>

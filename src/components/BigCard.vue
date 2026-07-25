@@ -1,7 +1,7 @@
 
 <template>
     <div class="relative pt-[64px] flex justify-center">
-        <div class="flex not-md:flex-wrap-reverse w-full max-w-[1280px] h-fit md:h-[500px] overflow-hidden">
+        <div class="flex not-md:flex-wrap-reverse w-full max-w-[1280px] h-fit md:h-[550px] overflow-hidden">
             <!-- Текстовый блок -->
             <div class="relative md:flex-1/3 w-full h-full not-md:flex-wrap-reverse">
                 <!-- Мелкий значек -->
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <!-- Кнопка -->
-                 <div class="relative md:absolute left-0 bottom-0 mx-[16px] md:mx-[32px] flex h-[44px] md:w-[144px] items-center justify-center rounded-[8px] md:rounded-[12px] border border-white/15 bg-white/5 backdrop-blur-md text-white transition hover:bg-white/10 hover:border-orange/80 cursor-pointer z-40">
+                 <div @click="navigate(routerName)" class="relative md:absolute left-0 bottom-0 mx-[16px] md:mx-[32px] flex h-[44px] md:w-[144px] items-center justify-center rounded-[8px] md:rounded-[12px] border border-white/15 bg-white/5 backdrop-blur-md text-white transition hover:bg-white/10 hover:border-orange/80 cursor-pointer z-40">
                     Подробнее
                 </div>
                 <!-- <div class="absolute left-0 mx-[16px] md:mx-[32px] bottom-0 flex justify-center items-center w-[144px] h-[44px] rounded-[12px] bg-orange/10 bg-background border border-accent z-40 text-secondary">Подробнее</div> -->
@@ -68,13 +68,19 @@
 
 <script setup>
 import { computed } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const navigate = (name) => router.push({name: name});
+
 const props = defineProps({
     icon: String,
     title: String,
     subTitle: String,
     image: String,
     textArray: Array,
-    nameRoute: String,
+    routerName: String,
 })
 
 const imageLink = computed(() =>

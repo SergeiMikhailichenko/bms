@@ -1,6 +1,6 @@
 <template>
     <!-- Наши услуги -->
-    <div class="border-gray/10 border-t py-[32px]">
+    <div class="py-[32px]">
         <div class="flex justify-center">
             <div class="px-[16px] md:px-[32px] flex justify-start text-[32px] md:text-[48px] text-secondary font-bold w-full max-w-[1280px]">
             Наши услуги
@@ -19,13 +19,7 @@
             :sub-title="smartHome.subTitle"
             :image="smartHome.image" 
             :text-array="smartHome.description"
-        />
-        <BigCard 
-            :icon="multimediaSystem.icon" 
-            :title="multimediaSystem.title"
-            :sub-title="multimediaSystem.subTitle"
-            :image="multimediaSystem.image" 
-            :text-array="multimediaSystem.description"
+            :router-name="smartHome.routerName"
         />
         <BigCard 
             :icon="infrastructure.icon" 
@@ -33,14 +27,24 @@
             :sub-title="infrastructure.subTitle"
             :image="infrastructure.image" 
             :text-array="infrastructure.description"
-        />
-        <BigCard 
+            :router-name="infrastructure.routerName"            
+            />
+            <BigCard 
+            :icon="multimediaSystem.icon" 
+            :title="multimediaSystem.title"
+            :sub-title="multimediaSystem.subTitle"
+            :image="multimediaSystem.image" 
+            :text-array="multimediaSystem.description"
+            :router-name="multimediaSystem.routerName"            
+            />
+            <BigCard 
             :icon="monitoring.icon" 
             :title="monitoring.title"
             :sub-title="monitoring.subTitle"
             :image="monitoring.image" 
             :text-array="monitoring.description"
-        />
+            :router-name="monitoring.routerName"            
+            />
     </div>
 </template>
 
@@ -52,6 +56,7 @@ const smartHome = {
   title: 'Система домашней автоматизации',
   subTitle: 'Умный дом',
   image: 'smart-home.jpeg',
+  routerName: 'SmartHome',
   description:[
     'Визуализация и система управления',
     'Автоматизация освещения',
@@ -59,34 +64,41 @@ const smartHome = {
     'Автоматизация отопления и теплых полов',
     'Автоматизация вентиляции и кондиционирования',
     'Автоматизация системы увлажнения',
+    'Автоматизация гидротехнических систем (бассейн, джакузи, сауна, хамам)',
+    'Автоматизация мультимедиа систем',
   ]
 };
 
-const multimediaSystem = {
-  icon: 'tv.svg',
-  title: 'Слаботочные системы и системы безопасности',
-  subTitle: 'Звук и видео',
-  image: 'jbl.jpg',
-  description: [
-    'Домашний кинотеатр',
-    'Светодиодные LED панели',
-    'Hi-Fi и Hi-End аудиосистемы',
-    'Профессиональные системы караоке',
-    'Профессиональная озвучка'
-  ]
-};
 const infrastructure = {
   icon: 'infrastructure.svg',
   title: 'Слаботочные системы и системы безопасности',
   subTitle: 'Инфраструктура',
   image: 'network.jpeg',
+  routerName: 'SmartHome',
   description: [
     'Охранно-пожарная сигнализация',
     'Видеонаблюдение',
     'Локальная компьютерная и Wi-Fi сеть',
     'Домофония и система контроля доступа',
     'Система защиты от затопления',
-    'Периметральная охрана'
+    'Периметральная охрана',
+    'Комплексные системы безопасности и АРМ (автоматическое рабочее место для охраны)',
+  ]
+};
+const multimediaSystem = {
+  icon: 'tv.svg',
+  title: 'Мультимедиа системы',
+  subTitle: 'Звук и видео',
+  image: 'jbl.jpg',
+  routerName: 'SmartHome',
+  description: [
+    'Система мультирум',
+    'Домашний кинотеатр',
+    'Светодиодные LED панели',
+    'Hi-Fi и Hi-End аудиосистемы',
+    'Профессиональные системы караоке',
+    'Профессиональная озвучка',
+    'Светотехнические системы',
   ]
 };
 const monitoring = {
@@ -94,6 +106,7 @@ const monitoring = {
   title: 'Системы диспетчеризации',
   subTitle: 'Мониторинг и контроль',
   image: 'beckhoff.jpeg',
+  routerName: 'SmartHome',
   description: [
     'Диспетчеризация котельного оборудования',
     'Диспетчеризация систем общеобменной вентиляции и кондиционирования',

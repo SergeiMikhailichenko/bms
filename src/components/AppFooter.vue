@@ -6,26 +6,26 @@
 
 
 
-<footer class="border-t border-gray/10 bg-background">
-  <div class="mx-auto flex max-w-[1280px] flex-col gap-10 px-4 py-12 md:flex-row md:justify-between md:px-8">
+<footer class="bg-background">
+  <div class="mx-auto flex max-w-[1280px] border-t border-gray/10 flex-col gap-10 px-4 py-12 md:flex-row md:justify-between md:px-8">
 
     <!-- Компания -->
-    <div class="max-w-sm">
-      <h3 class="text-2xl font-bold text-secondary">
+    <div class="max-w-[600px]">
+      <h3 class="text-[24px] font-bold text-secondary">
         BMS
       </h3>
 
-      <p class="mt-4 text-sm leading-7 text-gray">
+      <p class="mt-[16px] text-[14px] text-gray">
         С помощью современных технологий и команды лидеров мы создаём высокий уровень комфорта и безопасности для самых бескомпромиссных людей</p>
     </div>
 
     <!-- Контакты -->
     <div>
-      <h4 class="text-lg font-semibold text-secondary">
+      <h4 class="text-[18px] font-semibold text-secondary">
         Контакты
       </h4>
 
-      <div class="mt-4 space-y-3 text-gray">
+      <div class="mt-[16px] space-y-[12px] text-gray">
         <div class="flex gap-[12px]">
             <img src="@/assets/icons/phone.svg" alt="Телефон">
             <a
@@ -54,8 +54,8 @@
   </div>
 
   <!-- Нижняя строка -->
-  <div class="border-t border-gray/10">
-    <div class="mx-auto flex max-w-[1280px] items-center justify-center px-4 py-5 text-sm text-gray md:px-8">
+  <div class="">
+    <div class="border-t border-gray/10 mx-auto flex max-w-[1280px] items-center justify-center px-4 py-5 text-sm text-gray md:px-8">
       © 2026 BMS. All rights reserved.
     </div>
   </div>
